@@ -1,28 +1,28 @@
 package ro.itschool.entity;
 
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
-@Setter
 @Getter
+@Setter
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
 public class WinningCombination {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
 
-  //@ManyToMany
-  //List<Byte> bytes = new ArrayList<>();
-  private String winningNumbers;//4,34,6,20,13,40;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-  private LocalDateTime insertTime;
+    //14,24,45,2,8,33
+    private String winningNumbers;
 
+    private LocalDateTime insertTime;
 
 }

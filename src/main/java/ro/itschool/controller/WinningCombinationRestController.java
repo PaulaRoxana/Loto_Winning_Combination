@@ -10,20 +10,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-
-
+//Optional = wrapper over null
 @RestController
 public class WinningCombinationRestController {
-  @Autowired
-  WinningCombinationRepo repo;
 
-  @GetMapping(value = "/winning-combination")
-  public List<Integer> getWinningCombination() {
+    @Autowired
+    private WinningCombinationRepo repo;
+
+    @GetMapping(value = "/winning-combination")
+    public List<Integer> getWiningCombination() {
         Optional<WinningCombination> latestWinningCombination = repo.getLatestWinningCombination();
-    return latestWinningCombination
-      .map(winningCombination -> Arrays.stream(winningCombination.getWinningNumbers().split(","))
-        .map(Integer::parseInt)
-        .toList())
-      .orElseGet(ArrayList::new);
-  }
+
+        return latestWinningCombination
+                .map(winningCombination -> Arrays.stream(winningCombination.getWinningNumbers().split(","))
+                        .map(Integer::parseInt)
+                        .toList())
+                .orElseGet(ArrayList::new);
+    }
 }

@@ -15,11 +15,11 @@ import java.time.LocalDateTime;
 @Getter
 @ToString
 public class Winner {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-  private String winnerName;
+    private String winnerName;
 
-  private LocalDateTime winningTime;
+    private LocalDateTime winningTime;
 }

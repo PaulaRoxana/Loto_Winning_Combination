@@ -11,12 +11,12 @@ import java.time.LocalDateTime;
 @Setter
 public class Ticket {
 
-  private Integer id;
+    private Integer id;
 
-  //14,24,45,2,8,33
-  private String winningNumbers;
+    //14,24,45,2,8,33
+    private String winningNumbers;
 
-  private LocalDateTime insertTime;
+    private LocalDateTime insertTime;
 
-  private String buyer;
+    private String buyer;
 }
